@@ -57,7 +57,7 @@ class NewPlayer extends Component {
             />
           </p>
           <p>
-            Position:
+            Position PG, SG, SF, PF, C:
             <input
               type="text"
               placeholder="Position"
