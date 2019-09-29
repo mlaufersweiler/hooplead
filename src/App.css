@@ -1,12 +1,11 @@
 .App {
   text-align: center;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right, #2aabe4, #9dc8e4);
+  overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -15,8 +14,23 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+button {
+  background-color: #f8a052;
+  border-color: #f8a052;
+  color: #211102;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #09d3ac;
+form {
+  padding-bottom: 10px;
+}
+
+p {
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }

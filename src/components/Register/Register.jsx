@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { async } from "q";
+import { connect } from "react-redux";
+import { updateUser } from "../../dux/reducer";
+
+import logo from "../../images/logo.png";
+import "../Login/Login.css";
 
 class Register extends Component {
   constructor() {
@@ -26,7 +30,10 @@ class Register extends Component {
       .then(async res => {
         console.log(res);
         if (res.status === 200) {
-          let resWithCoachId = await axios.get();
+          let resWithCoachId = await axios.get("/api/coach_session");
+          // console.log(resWithCoachId)
+          this.props.updateUser(resWithCoachId.data);
+          this.props.history.push("/dashboard");
         }
       })
       .catch(err => {
@@ -39,9 +46,10 @@ class Register extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Register below to start tracking your teams!</h3>
-        <form>
+      <div className="Login-container">
+        <img className="Login-img" src={logo} alt="logo" />
+        <h3 className="Login">Register below to start tracking your teams!</h3>
+        <form className="Login form">
           <p>Username</p>
           <input
             type="text"
@@ -70,4 +78,13 @@ class Register extends Component {
   }
 }
 
-export default Register;
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { updateUser }
+)(Register);
