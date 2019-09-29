@@ -33,7 +33,7 @@ class Header extends Component {
     return (
       <div className="Header-wrapper">
         <div className="Header-content">
-          <h2 className="Header-user">{username}</h2>
+          <h2 className="Header-user"> Welcome, {username}</h2>
           <Link to="/dashboard">
             <img className="logo" src={logo} alt="logo" />
           </Link>

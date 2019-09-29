@@ -54,17 +54,19 @@ class Login extends Component {
       <div className="Login-container">
         <img className="Login-img" src={logo} alt="logo" />
         <h2 className="Login">Welcome to hooplead!</h2>
-        <h3 className="Login">Please Sign-In</h3>
-        <form className="Login form">
-          <p>Username</p>
+        <h3 className="Login-sub">Please Sign-In</h3>
+        <form className="login-form">
+          <p>Username:</p>
           <input
+            className="login-input"
             type="text"
             placeholder="Username"
             name="username"
             onChange={this.handleInput}
           />
-          <p>Password</p>
+          <p>Password:</p>
           <input
+            className="login-input"
             type="password"
             placeholder="Password"
             name="password"

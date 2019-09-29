@@ -11,12 +11,9 @@
 
 .Header-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  align-content: stretch;
-  background-image: linear-gradient(to right, #33393d, #666b6e);
+  background-image: linear-gradient(to right, #282a2b, #53636d);
   height: 100%;
 }
 
@@ -25,6 +22,7 @@
   height: 90%;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
+  color: white;
 }
 
 .settings {
@@ -51,6 +49,7 @@
 .Header-signout {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
+  color: white;
 }
 
 .Header-signout,

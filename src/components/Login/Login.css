@@ -10,12 +10,33 @@
 .Login {
   font-size: calc(10px + 2vmin);
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 2em;
   color: white;
 }
-
+.Login-sub {
+  font-size: calc(10px + 2vmin);
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: white;
+}
 .Login-img {
   max-width: 250px;
   max-height: 250px;
   width: 60vw;
+}
+.login-input {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+.login-input:hover {
+  border: 2px solid grey;
+}
+.login-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
