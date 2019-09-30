@@ -7,7 +7,7 @@ const auth_controller = require("./controllers/auth_controller");
 const team_controller = require("./controllers/team_controller");
 
 const app = express();
-app.use(express.static("build"));
+app.use(express.static(`${__dirname}/../build`));
 app.use(bodyParser.json());
 
 let { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
