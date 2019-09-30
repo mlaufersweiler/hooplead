@@ -1,14 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
-const bodyParser = require("body-parser");
 const massive = require("massive");
 const auth_controller = require("./controllers/auth_controller");
 const team_controller = require("./controllers/team_controller");
 
 const app = express();
-// app.use(express.static("build"));
-app.use(bodyParser.json());
+app.use(express.static(`${__dirname}/../build`));
 
 let { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
@@ -18,9 +16,9 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      maxAge: 259200000
+      maxAge: 2592000000
     },
-    expires: 259200000
+    expires: 25920000
   })
 );
 
