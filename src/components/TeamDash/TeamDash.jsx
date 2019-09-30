@@ -126,7 +126,9 @@ class TeamDash extends Component {
       return (
         <div className="player-display" key={i}>
           <h2 onClick={() => this.goToPlayer(player)}>{player.player_name}</h2>
-          <h3>{player.player_position}</h3>
+          <h3 onClick={() => this.goToPlayer(player)}>
+            {player.player_position}
+          </h3>
           <button onClick={() => this.dropPlayer(player)}>Drop Player</button>
         </div>
       );

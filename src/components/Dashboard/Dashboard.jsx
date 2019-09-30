@@ -45,8 +45,12 @@ class Dashboard extends Component {
   render() {
     let teams = this.state.teams.map((team, i) => {
       return (
-        <div className="team-display" key={i}>
-          <h2 onClick={() => this.goToTeam(team)}>{team.team_name}</h2>
+        <div
+          className="team-display"
+          key={i}
+          onClick={() => this.goToTeam(team)}
+        >
+          <h2>{team.team_name}</h2>
           <button onClick={() => this.dropTeam(team.team_id)}>Drop Team</button>
         </div>
       );

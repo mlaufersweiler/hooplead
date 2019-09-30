@@ -106,3 +106,8 @@
   padding-right: 10px;
   background-image: linear-gradient(to right, #9dc8e4, #2aabe4);
 }
+.player-display:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3;
+}
