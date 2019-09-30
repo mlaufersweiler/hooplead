@@ -19,7 +19,7 @@ app.use(
     cookie: {
       maxAge: 259200000
     },
-    expires: 259200000
+    expires: 25920000
   })
 );
 
